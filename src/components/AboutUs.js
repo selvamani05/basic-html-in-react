@@ -1,49 +1,61 @@
 import React from 'react'
+import {Link} from "react-router-dom";  
+import poke from "../assets/img/pink.jpg"
+import bitcoingirl from "../assets/img/bitcoingirl.jpg"
+import deskgirl from "../assets/img/deskgirl.jpg"
+import arguy from "../assets/img/arguy.jpg"
+import Subscribe from "./Subscribe"
 
 function AboutUs() {
+
     return (
         <div>
-                <div class="container-fluid">
-      <div class="row tm-brand-row">
-        <div class="col-lg-4 col-10">
-          <div class="tm-brand-container">
-            <div class="tm-brand-texts">
-              <h1 class="text-uppercase tm-brand-name">Next Level</h1>
+                <div className="container-fluid">
+      <div className="row tm-brand-row">
+        <div className="col-lg-4 col-10">
+          <div className="tm-brand-container">
+            <div className="tm-brand-texts">
+              <h1 className="text-uppercase tm-brand-name">Next Level</h1>
             </div>
           </div>
         </div>
-        <div class="col-lg-8 col-2 tm-nav-col">
-          <div class="tm-nav">
-            <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
+        <div className="col-lg-8 col-2 tm-nav-col">
+          <div className="tm-nav">
+            <nav className="navbar navbar-expand-lg navbar-light tm-navbar">
               <button
-                class="navbar-toggler"
+                className="navbar-toggler"
                 type="button"
                 data-toggle="collapse"
                 data-target="#navbarNav"
                 aria-controls="navbarNav"
                 aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto mr-0">
-                  <li class="nav-item">
-                    <div class="tm-nav-link-highlight"></div>
-                    <a class="nav-link" href="index.html">Home</a>
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav ml-auto mr-0">
+                  <li className="nav-item">
+                    <div className="tm-nav-link-highlight"></div>
+                  {/*   <a className="nav-link" href="index.html">Home</a> */}
+                  <Link className="nav-link" to="/home">Home</Link>
                   </li>
-                  <li class="nav-item active">
-                    <div class="tm-nav-link-highlight"></div>
-                    <a class="nav-link" href="about.html">
-                      About <span class="sr-only">(current)</span></a
-                    >
+                  <li className="nav-item active">
+                    <div className="tm-nav-link-highlight"></div>
+                    {/* <a className="nav-link" href="about.html">
+                    
+                      About <span className="sr-only">(current)</span></a
+                    > */}
+                    <Link className="nav-link" to="/about">About</Link>
                   </li>
-                  <li class="nav-item">
-                    <div class="tm-nav-link-highlight"></div>
-                    <a class="nav-link" href="gallery.html">Gallery</a>
+                  <li className="nav-item">
+                    <div className="tm-nav-link-highlight"></div>
+                    {/* <a className="nav-link" href="gallery.html">Gallery</a> */}
+                    <Link className="nav-link" to="/gallery">Gallery</Link>
                   </li>
-                  <li class="nav-item">
-                    <div class="tm-nav-link-highlight"></div>
-                    <a class="nav-link" href="contact.html">Contact</a>
+                  <li className="nav-item">
+                    <div className="tm-nav-link-highlight"></div>
+                    {/* <a className="nav-link" href="contact.html">Contact</a> */}
+                    <Link className="nav-link" to="/contact">Contact</Link>
                   </li>
                 </ul>
               </div>
@@ -52,58 +64,64 @@ function AboutUs() {
         </div>
       </div>
 
-      <div class="row tm-welcome-row">
-        <div class="col-12 tm-page-cols-container">
-          <div class="tm-page-col-left tm-welcome-box tm-bg-gradient">
-            <p class="tm-welcome-text">
+      <div className="row tm-welcome-row">
+        <div className="col-12 tm-page-cols-container">
+          <div className="tm-page-col-left tm-welcome-box tm-bg-gradient">
+            <p className="tm-welcome-text">
               <em
                 >"This is a gradient CSS background #A0c0c0 to #669999 and right
                 side is a pink lady parallx image."</em
               >
             </p>
           </div>
-          <div class="tm-page-col-right">
+
+          <img className="tm-welcome-parallax" alt="jp" src={poke}/>
+          <div className="tm-page-col-right">
             <div
-              class="tm-welcome-parallax"
+              className="tm-welcome-parallax"
               data-parallax="scroll"
-              data-image-src="img/pink-contem-girl.jpg"
-            ></div>
+              data-image-src={poke}
+              
+              
+            ><img className="tm-welcome-parallax" alt="jp"   src={poke}/></div>
           </div>
         </div>
       </div>
 
-      <section class="row tm-pt-4 tm-pb-6">
-        <div class="col-12 tm-tabs-container tm-page-cols-container">
-          <div class="tm-page-col-left tm-tab-links">
-            <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+      
+
+      <section className="row tm-pt-4 tm-pb-6">
+        <div className="col-12 tm-tabs-container tm-page-cols-container">
+          <div className="tm-page-col-left tm-tab-links">
+            <ul className="tabs clearfix" data-tabgroup="first-tab-group">
               <li>
-                <a href="#tab1" class="active">
-                  <div class="tm-tab-icon"></div>
+                <a href="#tab1" className="active">
+                  <div className="tm-tab-icon"></div>
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#tab2" class="">
-                  <div class="tm-tab-icon"></div>
+                <a href="#tab2" className="">
+                  <div className="tm-tab-icon"></div>
                   Vision and Mission
                 </a>
               </li>
               <li>
-                <a href="#tab3" class="">
-                  <div class="tm-tab-icon"></div>
+                <a href="#tab3" className="">
+                  <div className="tm-tab-icon"></div>
                   Our History
                 </a>
               </li>
             </ul>
           </div>
-          <div class="tm-page-col-right tm-tab-contents">
-            <div id="first-tab-group" class="tabgroup">
+          <div className="tm-page-col-right tm-tab-contents">
+            <div id="first-tab-group" className="tabgroup">
               <div id="tab1">
-                <div class="text-content">
-                  <h3 class="tm-text-secondary tm-mb-5">
+                <div className="text-content">
+                  <h3 className="tm-text-secondary tm-mb-5">
                     About Us
                   </h3>
-                  <p class="tm-mb-5">
+                  <p className="tm-mb-5">
                     Above pink girl photo is provided by Moose Photos from
                     Pexels. This is a tab content area. There are 3 tabs at the
                     left side. Curabitur porttitor metus nisl. Nullam nec dictum
@@ -111,7 +129,7 @@ function AboutUs() {
                     massa eu orci vulputate varius. Quisque quis ullamcorper
                     sapien. Integer eu luctus nulla, vel viverra odio.
                   </p>
-                  <p class="tm-mb-5">
+                  <p className="tm-mb-5">
                     Praesent id felis ac erat elementum condimentum.
                     Pellentesque a libero vitae nisi vestibulum tempor vitae
                     vitae nulla. Praesent ut eleifend ligula, nec pretium erat.
@@ -119,37 +137,37 @@ function AboutUs() {
                     turpis.
                   </p>
                 </div>
-                <div class="row tm-pt-5">
-                  <div class="col-md-4 text-center">
-                    <div class="tm-about-person mx-auto">
+                <div className="row tm-pt-5">
+                  <div className="col-md-4 text-center">
+                    <div className="tm-about-person mx-auto">
                       <img
-                        src="img/bitcoin-girl.jpg"
-                        alt="Image"
-                        class="img-fluid tm-mb-1"
+                        src={bitcoingirl}
+                        alt="jp"
+                        className="img-fluid tm-mb-1"
                       />
-                      <h4 class="tm-text-secondary tm-mb-1">
+                      <h4 className="tm-text-secondary tm-mb-1">
                         Catherine Theta
                       </h4>
-                      <p class="tm-mb-2">Project Manager</p>
-                      <div class="tm-mb-3">
+                      <p className="tm-mb-2">Project Manager</p>
+                      <div className="tm-mb-3">
                         <a
                           href="https://facebook.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-facebook-f tm-about-social-icon"></i>
+                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://twitter.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-twitter tm-about-social-icon"></i>
+                          <i className="fab fa-twitter tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://linkedin.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
                           <i
-                            class="fab fa-linkedin-in tm-about-social-icon"
+                            className="fab fa-linkedin-in tm-about-social-icon"
                           ></i>
                         </a>
                       </div>
@@ -161,34 +179,34 @@ function AboutUs() {
                     </div>
                   </div>
 
-                  <div class="col-md-4 text-center">
-                    <div class="tm-about-person mx-auto">
+                  <div className="col-md-4 text-center">
+                    <div className="tm-about-person mx-auto">
                       <img
-                        src="img/ar-guy.jpg"
-                        alt="Image"
-                        class="img-fluid tm-mb-1"
+                        src={arguy}
+                        alt="jp"
+                        className="img-fluid tm-mb-1"
                       />
-                      <h4 class="tm-text-secondary tm-mb-1">New Hudson</h4>
-                      <p class="tm-mb-2">Digital Marketing</p>
-                      <div class="tm-mb-3">
+                      <h4 className="tm-text-secondary tm-mb-1">New Hudson</h4>
+                      <p className="tm-mb-2">Digital Marketing</p>
+                      <div className="tm-mb-3">
                         <a
                           href="https://facebook.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-facebook-f tm-about-social-icon"></i>
+                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://twitter.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-twitter tm-about-social-icon"></i>
+                          <i className="fab fa-twitter tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://linkedin.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
                           <i
-                            class="fab fa-linkedin-in tm-about-social-icon"
+                            className="fab fa-linkedin-in tm-about-social-icon"
                           ></i>
                         </a>
                       </div>
@@ -199,34 +217,34 @@ function AboutUs() {
                     </div>
                   </div>
 
-                  <div class="col-md-4 text-center">
-                    <div class="tm-about-person mx-auto">
+                  <div className="col-md-4 text-center">
+                    <div className="tm-about-person mx-auto">
                       <img
-                        src="img/desk-girl.jpg"
-                        alt="Image"
-                        class="img-fluid tm-mb-1"
+                        src={deskgirl}
+                        alt="jp"
+                        className="img-fluid tm-mb-1"
                       />
-                      <h4 class="tm-text-secondary tm-mb-1">Jennifer Wall</h4>
-                      <p class="tm-mb-2">Team Leader</p>
-                      <div class="tm-mb-3">
+                      <h4 className="tm-text-secondary tm-mb-1">Jennifer Wall</h4>
+                      <p className="tm-mb-2">Team Leader</p>
+                      <div className="tm-mb-3">
                         <a
                           href="https://facebook.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-facebook-f tm-about-social-icon"></i>
+                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://twitter.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-twitter tm-about-social-icon"></i>
+                          <i className="fab fa-twitter tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://linkedin.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
                           <i
-                            class="fab fa-linkedin-in tm-about-social-icon"
+                            className="fab fa-linkedin-in tm-about-social-icon"
                           ></i>
                         </a>
                       </div>
@@ -239,16 +257,16 @@ function AboutUs() {
                 </div>
               </div>
               <div id="tab2">
-                <div class="text-content">
-                  <h3 class="tm-text-secondary tm-mb-5">Vision and Mission</h3>
-                  <p class="tm-mb-5">
+                <div className="text-content">
+                  <h3 className="tm-text-secondary tm-mb-5">Vision and Mission</h3>
+                  <p className="tm-mb-5">
                     Nam consequat, leo vitae aliquet dignissim, leo est laoreet
                     nibh, nec dictum libero justo vitae dolor. Donec tristique
                     eros at nisi elementum efficitur. Proin ornare feugiat ex
                     placerat pellenteqsue. Nulla convallis est volutpat ex
                     ultrices facilisis.
                   </p>
-                  <p class="tm-mb-5">
+                  <p className="tm-mb-5">
                     Etiam egestas metus vitae est interdum, in eleifend nunc
                     volutpat. Aliquam molestie ipsum quis suscipit lacinia.
                     Mauris turpis libero, iaculis non dictum ac, ornare a massa.
@@ -257,37 +275,37 @@ function AboutUs() {
                     pulvinar purus, sit amet luctus urna.
                   </p>
                 </div>
-                <div class="row tm-pt-5">
-                  <div class="col-md-4 text-center">
-                    <div class="tm-about-person mx-auto">
+                <div className="row tm-pt-5">
+                  <div className="col-md-4 text-center">
+                    <div className="tm-about-person mx-auto">
                       <img
-                        src="img/bitcoin-girl.jpg"
-                        alt="Image"
-                        class="img-fluid tm-mb-1"
+                        src={bitcoingirl}
+                        alt="jp"
+                        className="img-fluid tm-mb-1"
                       />
-                      <h4 class="tm-text-secondary tm-mb-1">
+                      <h4 className="tm-text-secondary tm-mb-1">
                         Catherine Theta
                       </h4>
-                      <p class="tm-mb-2">Project Manager</p>
-                      <div class="tm-mb-3">
+                      <p className="tm-mb-2">Project Manager</p>
+                      <div className="tm-mb-3">
                         <a
                           href="https://facebook.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-facebook-f tm-about-social-icon"></i>
+                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://twitter.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-twitter tm-about-social-icon"></i>
+                          <i className="fab fa-twitter tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://linkedin.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
                           <i
-                            class="fab fa-linkedin-in tm-about-social-icon"
+                            className="fab fa-linkedin-in tm-about-social-icon"
                           ></i>
                         </a>
                       </div>
@@ -299,34 +317,34 @@ function AboutUs() {
                     </div>
                   </div>
 
-                  <div class="col-md-4 text-center">
-                    <div class="tm-about-person mx-auto">
+                  <div className="col-md-4 text-center">
+                    <div className="tm-about-person mx-auto">
                       <img
-                        src="img/ar-guy.jpg"
-                        alt="Image"
-                        class="img-fluid tm-mb-1"
+                        src={arguy}
+                        alt="jp"
+                        className="img-fluid tm-mb-1"
                       />
-                      <h4 class="tm-text-secondary tm-mb-1">New Hudson</h4>
-                      <p class="tm-mb-2">Digital Marketing</p>
-                      <div class="tm-mb-3">
+                      <h4 className="tm-text-secondary tm-mb-1">New Hudson</h4>
+                      <p className="tm-mb-2">Digital Marketing</p>
+                      <div className="tm-mb-3">
                         <a
                           href="https://facebook.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-facebook-f tm-about-social-icon"></i>
+                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://twitter.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-twitter tm-about-social-icon"></i>
+                          <i className="fab fa-twitter tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://linkedin.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
                           <i
-                            class="fab fa-linkedin-in tm-about-social-icon"
+                            className="fab fa-linkedin-in tm-about-social-icon"
                           ></i>
                         </a>
                       </div>
@@ -337,34 +355,34 @@ function AboutUs() {
                     </div>
                   </div>
 
-                  <div class="col-md-4 text-center">
-                    <div class="tm-about-person mx-auto">
+                  <div className="col-md-4 text-center">
+                    <div className="tm-about-person mx-auto">
                       <img
-                        src="img/desk-girl.jpg"
-                        alt="Image"
-                        class="img-fluid tm-mb-1"
+                        src={deskgirl}
+                        alt="jp"
+                        className="img-fluid tm-mb-1"
                       />
-                      <h4 class="tm-text-secondary tm-mb-1">Jennifer Wall</h4>
-                      <p class="tm-mb-2">Team Leader</p>
-                      <div class="tm-mb-3">
+                      <h4 className="tm-text-secondary tm-mb-1">Jennifer Wall</h4>
+                      <p className="tm-mb-2">Team Leader</p>
+                      <div className="tm-mb-3">
                         <a
                           href="https://facebook.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-facebook-f tm-about-social-icon"></i>
+                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://twitter.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-twitter tm-about-social-icon"></i>
+                          <i className="fab fa-twitter tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://linkedin.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
                           <i
-                            class="fab fa-linkedin-in tm-about-social-icon"
+                            className="fab fa-linkedin-in tm-about-social-icon"
                           ></i>
                         </a>
                       </div>
@@ -377,16 +395,16 @@ function AboutUs() {
                 </div>
               </div>
               <div id="tab3">
-                <div class="text-content">
-                  <h3 class="tm-text-secondary tm-mb-5">Our History</h3>
-                  <p class="tm-mb-5">
+                <div className="text-content">
+                  <h3 className="tm-text-secondary tm-mb-5">Our History</h3>
+                  <p className="tm-mb-5">
                     Mauris turpis libero, iaculis non dictum ac, ornare a massa.
                     Duis id lorem purus. Fusce viverra ullamcorper metus.
                     Curabitur puvinar suscipit sapien ac blandit. Aliquam vel
                     pulvinar purus, sit amet luctus urna. Nulla convallis est
                     volutpat ex ultrices facilisis.
                   </p>
-                  <p class="tm-mb-5">
+                  <p className="tm-mb-5">
                     Etiam egestas metus vitae est interdum, in eleifend nunc
                     volutpat. Aliquam molestie ipsum quis suscipit lacinia. Nam
                     consequat, leo vitae aliquet dignissim, leo est laoreet
@@ -395,37 +413,37 @@ function AboutUs() {
                     placerat pellenteqsue.
                   </p>
                 </div>
-                <div class="row tm-pt-5">
-                  <div class="col-md-4 text-center">
-                    <div class="tm-about-person mx-auto">
+                <div className="row tm-pt-5">
+                  <div className="col-md-4 text-center">
+                    <div className="tm-about-person mx-auto">
                       <img
-                        src="img/bitcoin-girl.jpg"
-                        alt="Image"
-                        class="img-fluid tm-mb-1"
+                        src={bitcoingirl}
+                        alt="jp"
+                        className="img-fluid tm-mb-1"
                       />
-                      <h4 class="tm-text-secondary tm-mb-1">
+                      <h4 className="tm-text-secondary tm-mb-1">
                         Catherine Theta
                       </h4>
-                      <p class="tm-mb-2">Project Manager</p>
-                      <div class="tm-mb-3">
+                      <p className="tm-mb-2">Project Manager</p>
+                      <div className="tm-mb-3">
                         <a
                           href="https://facebook.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-facebook-f tm-about-social-icon"></i>
+                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://twitter.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-twitter tm-about-social-icon"></i>
+                          <i className="fab fa-twitter tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://linkedin.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
                           <i
-                            class="fab fa-linkedin-in tm-about-social-icon"
+                            className="fab fa-linkedin-in tm-about-social-icon"
                           ></i>
                         </a>
                       </div>
@@ -437,34 +455,34 @@ function AboutUs() {
                     </div>
                   </div>
 
-                  <div class="col-md-4 text-center">
-                    <div class="tm-about-person mx-auto">
+                  <div className="col-md-4 text-center">
+                    <div className="tm-about-person mx-auto">
                       <img
-                        src="img/ar-guy.jpg"
-                        alt="Image"
-                        class="img-fluid tm-mb-1"
+                        src={arguy}
+                        alt="jp"
+                        className="img-fluid tm-mb-1"
                       />
-                      <h4 class="tm-text-secondary tm-mb-1">New Hudson</h4>
-                      <p class="tm-mb-2">Digital Marketing</p>
-                      <div class="tm-mb-3">
+                      <h4 className="tm-text-secondary tm-mb-1">New Hudson</h4>
+                      <p className="tm-mb-2">Digital Marketing</p>
+                      <div className="tm-mb-3">
                         <a
                           href="https://facebook.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-facebook-f tm-about-social-icon"></i>
+                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://twitter.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-twitter tm-about-social-icon"></i>
+                          <i className="fab fa-twitter tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://linkedin.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
                           <i
-                            class="fab fa-linkedin-in tm-about-social-icon"
+                            className="fab fa-linkedin-in tm-about-social-icon"
                           ></i>
                         </a>
                       </div>
@@ -475,34 +493,34 @@ function AboutUs() {
                     </div>
                   </div>
 
-                  <div class="col-md-4 text-center">
-                    <div class="tm-about-person mx-auto">
+                  <div className="col-md-4 text-center">
+                    <div className="tm-about-person mx-auto">
                       <img
-                        src="img/desk-girl.jpg"
-                        alt="Image"
-                        class="img-fluid tm-mb-1"
+                        src={deskgirl}
+                        alt="jp"
+                        className="img-fluid tm-mb-1"
                       />
-                      <h4 class="tm-text-secondary tm-mb-1">Jennifer Wall</h4>
-                      <p class="tm-mb-2">Team Leader</p>
-                      <div class="tm-mb-3">
+                      <h4 className="tm-text-secondary tm-mb-1">Jennifer Wall</h4>
+                      <p className="tm-mb-2">Team Leader</p>
+                      <div className="tm-mb-3">
                         <a
                           href="https://facebook.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-facebook-f tm-about-social-icon"></i>
+                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://twitter.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
-                          <i class="fab fa-twitter tm-about-social-icon"></i>
+                          <i className="fab fa-twitter tm-about-social-icon"></i>
                         </a>
                         <a
                           href="https://linkedin.com"
-                          class="tm-about-social-link"
+                          className="tm-about-social-link"
                         >
                           <i
-                            class="fab fa-linkedin-in tm-about-social-icon"
+                            className="fab fa-linkedin-in tm-about-social-icon"
                           ></i>
                         </a>
                       </div>
@@ -519,30 +537,32 @@ function AboutUs() {
         </div>
       </section>
 
-      
-      <section class="row" id="tmCallToAction">
-        <div class="col-12 tm-page-cols-container tm-call-to-action-col">
-          <div class="tm-page-col-right">
-            <div class="tm-call-to-action-box">
-              <i class="fas fa-3x fa-rss-square tm-call-to-action-icon"></i>
-              <div class="tm-call-to-action-text">
-                <h3 class="tm-call-to-action-title">
+      <Subscribe/>
+    
+
+      {/* <section className="row" id="tmCallToAction">
+        <div className="col-12 tm-page-cols-container tm-call-to-action-col">
+          <div className="tm-page-col-right">
+            <div className="tm-call-to-action-box">
+              <i className="fas fa-3x fa-rss-square tm-call-to-action-icon"></i>
+              <div className="tm-call-to-action-text">
+                <h3 className="tm-call-to-action-title">
                   Vivamus sollicitudin tellus
                 </h3>
-                <p class="tm-call-to-action-description">
+                <p className="tm-call-to-action-description">
                   Maecenas maximus tellus in dolor auctor tristique. Nam
                   hendrerit posuere laoreet. Aliquam erat volutpat. Nulla eros
                   est, imperdiet vel feugiat non, ullamcorper mattis nulla.
                 </p>
-                <form action="#" method="GET" class="tm-call-to-action-form">
+                <form action="#" method="GET" className="tm-call-to-action-form">
                   <input
                     type="email"
                     name="email"
                     placeholder="Email"
-                    class="tm-email-input"
+                    className="tm-email-input"
                     required
                   />
-                  <button type="submit" class="btn btn-primary">
+                  <button type="submit" className="btn btn-primary">
                     Subscribe
                   </button>
                 </form>
@@ -550,10 +570,10 @@ function AboutUs() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       
-      <footer class="row tm-page-footer">
-        <p class="col-12 tm-copyright-text mb-0">
+      <footer className="row tm-page-footer">
+        <p className="col-12 tm-copyright-text mb-0">
           Copyright &copy; 2019 Next Level Company... Designed by Template Mo
         </p>
       </footer>
