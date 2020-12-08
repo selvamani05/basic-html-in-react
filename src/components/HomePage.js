@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom";  
+import Footer from './Footer';
 import Subscribe from "./Subscribe"
 
 
@@ -24,25 +25,23 @@ function HomePage() {
                 <ul className="navbar-nav ml-auto mr-0">
                   <li className="nav-item active">
                     <div className="tm-nav-link-highlight"></div>
-                   {/*  <a className="nav-link" href="#"
-                      >Home <span className="sr-only">(current)</span></a
-                    > */}
+                  
                     <Link className="nav-link" to="/">Home</Link>
                   </li>
                   <li className="nav-item">
                     <div className="tm-nav-link-highlight"></div>
-                  {/*   <a className="nav-link" href="about.html">About</a> */}
+                
                   <Link className="nav-link" to="/about">About</Link>
                   </li>
                   <li className="nav-item">
                     <div className="tm-nav-link-highlight"></div>
-                    {/* <a className="nav-link" href="gallery.html">Gallery</a> */}
+                   
                     <Link className="nav-link" to="/gallery">Gallery</Link>
                   
                   </li>
                   <li className="nav-item">
                     <div className="tm-nav-link-highlight"></div>
-                    {/* <a className="nav-link" href="contact.html">Contact</a> */}
+                    
                     <Link className="nav-link" to="/contact">Contact</Link>
                   </li>
                 </ul>
@@ -85,15 +84,7 @@ function HomePage() {
         </div>
       </div>
 
-      {/* <div className="tm-page-col-right">
-            <div
-              className="tm-welcome-parallax"
-              data-parallax="scroll"
-              data-image-src="..src/assets/img/gallery /gallery-item-01.jpg"
-              
-            ></div> */}
-
-      <section className="row tm-pt-4 tm-pb-6">
+            <section className="row tm-pt-4 tm-pb-6">
         <div className="col-12 tm-page-cols-container">
           <div className="tm-page-col-right">
             <h2 className="tm-text-secondary tm-mb-5">
@@ -159,37 +150,8 @@ function HomePage() {
         </div>
       </div>
 <Subscribe/>
-     {/*  <section className="row" id="tmCallToAction">
-        <div className="col-12 tm-page-cols-container tm-call-to-action-col">
-          <div className="tm-page-col-right">
-            <div className="tm-call-to-action-box">
-              <i className="fas fa-3x fa-rss-square tm-call-to-action-icon"></i>
-              <div className="tm-call-to-action-text">
-                <h3 className="tm-call-to-action-title">
-                  Vivamus sollicitudin tellus
-                </h3>
-                <p className="tm-call-to-action-description">
-                  Maecenas maximus tellus in dolor auctor tristique. Nam
-                  hendrerit posuere laoreet. Aliquam erat volutpat. Nulla eros
-                  est, imperdiet vel feugiat non, ullamcorper mattis nulla.
-                </p>
-                <form action="#" method="GET" className="tm-call-to-action-form">
-                  <input type="email" name="email" placeholder="Email" className="tm-email-input" required />
-                  <button type="submit" className="btn btn-primary">
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      <footer className="row tm-page-footer">
-        <p className="col-12 tm-copyright-text mb-0">
-          Copyright &copy; 2019 Next Level Company... Designed by
-          <a href="https://fb.com/templatemo" rel="nofollow" className="tm-copyright-link">Template Mo</a>
-        </p>
-      </footer>
+     
+      <Footer/>
     </div>
 
         </div>

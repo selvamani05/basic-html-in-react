@@ -13,67 +13,18 @@ import galleryitem09 from '../assets/img/gallery/gallery-item-09.jpg'
 import galleryitem10 from '../assets/img/gallery/gallery-item-10.jpg'
 import galleryitem11 from '../assets/img/gallery/gallery-item-11.jpg'
 import galleryitem12 from '../assets/img/gallery/gallery-item-12.jpg'
+import NavItems from './NavItems';  
 import Subscribe from "./Subscribe"
+import Footer from './Footer';
 
 
 function Gallery() {
     return (
         <div>
             <div className="container-fluid">
-      <div className="row tm-brand-row">
-        <div className="col-lg-4 col-10">
-          <div className="tm-brand-container">
-            <div className="tm-brand-texts">
-              <h1 className="text-uppercase tm-brand-name">Next Level</h1>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-8 col-2 tm-nav-col">
-          <div className="tm-nav">
-            <nav className="navbar navbar-expand-lg navbar-light tm-navbar">
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav ml-auto mr-0">
-                
-                  <li className="nav-item">
-                    <div className="tm-nav-link-highlight"></div>
-                   {/*  <a className="nav-link" href="index.html">Home</a> */}
-                    <Link className="nav-link" to="/">Home</Link>
-                  </li>
-                  <li className="nav-item">
-                    <div className="tm-nav-link-highlight"></div>
-                    {/* <a className="nav-link" href="about.html"> About</a> */}
-                     <Link className="nav-link" to="/about">About</Link>
-                  </li>
-                  <li class="nav-item active">
-                    <div className="tm-nav-link-highlight"></div>
-                    {/* <a className="nav-link" href="gallery.html">
-                      Gallery <span className="sr-only">(current)</span>
-                    </a> */}
-                    <Link className="nav-link" to="/gallery">Gallery</Link>
-                  </li>
-                  <li class="nav-item">
-                    <div className="tm-nav-link-highlight"></div>
-                   {/*  <a className="nav-link" href="contact.html">Contact</a> */}
-                   <Link className="nav-link" to="/contact">Contact</Link>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
+      <NavItems/>
 
-      <div class="row tm-welcome-row">
+      <div className="row tm-welcome-row">
         <div className="col-12">
           <div
             className="tm-welcome-parallax tm-center-child"
@@ -296,45 +247,9 @@ function Gallery() {
       <Subscribe/>
 
      
-      {/* <section className="row" id="tmCallToAction">
-        <div className="col-12 tm-page-cols-container tm-call-to-action-col">
-          <div className="tm-page-col-right">
-            <div className="tm-call-to-action-box">
-              <i className="fas fa-3x fa-rss-square tm-call-to-action-icon"></i>
-              <div className="tm-call-to-action-text">
-                <h3 className="tm-call-to-action-title">
-                  Vivamus sollicitudin tellus
-                </h3>
-                <p className="tm-call-to-action-description">
-                  Maecenas maximus tellus in dolor auctor tristique. Nam
-                  hendrerit posuere laoreet. Aliquam erat volutpat. Nulla eros
-                  est, imperdiet vel feugiat non, ullamcorper mattis nulla.
-                </p>
-                <form action="#" method="GET" classNameName="tm-call-to-action-form">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    className="tm-email-input"
-                    required
-                  />
-                  <button type="submit" className="btn btn-primary">
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
       
-      <footer className="row tm-page-footer">
-        <p className="col-12 tm-copyright-text mb-0">
-          Copyright &copy; 2019 Next Level Company... 
-          
-          Designed by Template Mo
-        </p>
-      </footer>
+      
+      <Footer/>
     </div>
 
     

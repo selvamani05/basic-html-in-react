@@ -3,8 +3,9 @@ import HomePage from './components/HomePage'
 import AboutUs from './components/AboutUs'
 import Gallery from './components/Gallery'
 import Contact from './components/Contact'
-
+import NavItems from './components/NavItems'
 import {Switch,Route} from "react-router-dom";  
+import Footer from './components/Footer'
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <div>
         <Switch>
           <Route path="/about">
+          
           <AboutUs/>  
           </Route>
           

@@ -5,64 +5,16 @@ import bitcoingirl from "../assets/img/bitcoingirl.jpg"
 import deskgirl from "../assets/img/deskgirl.jpg"
 import arguy from "../assets/img/arguy.jpg"
 import Subscribe from "./Subscribe"
+import NavItems from './NavItems';
+import Board from "./Board"
+import Footer from "./Footer"
 
 function AboutUs() {
 
-    return (
+     return (
         <div>
                 <div className="container-fluid">
-      <div className="row tm-brand-row">
-        <div className="col-lg-4 col-10">
-          <div className="tm-brand-container">
-            <div className="tm-brand-texts">
-              <h1 className="text-uppercase tm-brand-name">Next Level</h1>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-8 col-2 tm-nav-col">
-          <div className="tm-nav">
-            <nav className="navbar navbar-expand-lg navbar-light tm-navbar">
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav ml-auto mr-0">
-                  <li className="nav-item">
-                    <div className="tm-nav-link-highlight"></div>
-                  {/*   <a className="nav-link" href="index.html">Home</a> */}
-                  <Link className="nav-link" to="/home">Home</Link>
-                  </li>
-                  <li className="nav-item active">
-                    <div className="tm-nav-link-highlight"></div>
-                    {/* <a className="nav-link" href="about.html">
-                    
-                      About <span className="sr-only">(current)</span></a
-                    > */}
-                    <Link className="nav-link" to="/about">About</Link>
-                  </li>
-                  <li className="nav-item">
-                    <div className="tm-nav-link-highlight"></div>
-                    {/* <a className="nav-link" href="gallery.html">Gallery</a> */}
-                    <Link className="nav-link" to="/gallery">Gallery</Link>
-                  </li>
-                  <li className="nav-item">
-                    <div className="tm-nav-link-highlight"></div>
-                    {/* <a className="nav-link" href="contact.html">Contact</a> */}
-                    <Link className="nav-link" to="/contact">Contact</Link>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
+      <NavItems/>
 
       <div className="row tm-welcome-row">
         <div className="col-12 tm-page-cols-container">
@@ -137,124 +89,7 @@ function AboutUs() {
                     turpis.
                   </p>
                 </div>
-                <div className="row tm-pt-5">
-                  <div className="col-md-4 text-center">
-                    <div className="tm-about-person mx-auto">
-                      <img
-                        src={bitcoingirl}
-                        alt="jp"
-                        className="img-fluid tm-mb-1"
-                      />
-                      <h4 className="tm-text-secondary tm-mb-1">
-                        Catherine Theta
-                      </h4>
-                      <p className="tm-mb-2">Project Manager</p>
-                      <div className="tm-mb-3">
-                        <a
-                          href="https://facebook.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://twitter.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-twitter tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://linkedin.com"
-                          className="tm-about-social-link"
-                        >
-                          <i
-                            className="fab fa-linkedin-in tm-about-social-icon"
-                          ></i>
-                        </a>
-                      </div>
-
-                      <p>
-                        Mauris efficitur risus mi, et varius dolor sodales
-                        facilisis. Fusce sed mi tristique.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="col-md-4 text-center">
-                    <div className="tm-about-person mx-auto">
-                      <img
-                        src={arguy}
-                        alt="jp"
-                        className="img-fluid tm-mb-1"
-                      />
-                      <h4 className="tm-text-secondary tm-mb-1">New Hudson</h4>
-                      <p className="tm-mb-2">Digital Marketing</p>
-                      <div className="tm-mb-3">
-                        <a
-                          href="https://facebook.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://twitter.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-twitter tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://linkedin.com"
-                          className="tm-about-social-link"
-                        >
-                          <i
-                            className="fab fa-linkedin-in tm-about-social-icon"
-                          ></i>
-                        </a>
-                      </div>
-                      <p>
-                        Pellentesque habitant morbi tristique senectus et netus
-                        et malesuada fames.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="col-md-4 text-center">
-                    <div className="tm-about-person mx-auto">
-                      <img
-                        src={deskgirl}
-                        alt="jp"
-                        className="img-fluid tm-mb-1"
-                      />
-                      <h4 className="tm-text-secondary tm-mb-1">Jennifer Wall</h4>
-                      <p className="tm-mb-2">Team Leader</p>
-                      <div className="tm-mb-3">
-                        <a
-                          href="https://facebook.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://twitter.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-twitter tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://linkedin.com"
-                          className="tm-about-social-link"
-                        >
-                          <i
-                            className="fab fa-linkedin-in tm-about-social-icon"
-                          ></i>
-                        </a>
-                      </div>
-                      <p>
-                        Three social icons are placed in above circles. Sed
-                        turpis nisl, congue a arcu in.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+               <Board/>
               </div>
               <div id="tab2">
                 <div className="text-content">
@@ -275,124 +110,7 @@ function AboutUs() {
                     pulvinar purus, sit amet luctus urna.
                   </p>
                 </div>
-                <div className="row tm-pt-5">
-                  <div className="col-md-4 text-center">
-                    <div className="tm-about-person mx-auto">
-                      <img
-                        src={bitcoingirl}
-                        alt="jp"
-                        className="img-fluid tm-mb-1"
-                      />
-                      <h4 className="tm-text-secondary tm-mb-1">
-                        Catherine Theta
-                      </h4>
-                      <p className="tm-mb-2">Project Manager</p>
-                      <div className="tm-mb-3">
-                        <a
-                          href="https://facebook.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://twitter.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-twitter tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://linkedin.com"
-                          className="tm-about-social-link"
-                        >
-                          <i
-                            className="fab fa-linkedin-in tm-about-social-icon"
-                          ></i>
-                        </a>
-                      </div>
-
-                      <p>
-                        Mauris efficitur risus mi, et varius dolor sodales
-                        facilisis. Fusce sed mi tristique.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="col-md-4 text-center">
-                    <div className="tm-about-person mx-auto">
-                      <img
-                        src={arguy}
-                        alt="jp"
-                        className="img-fluid tm-mb-1"
-                      />
-                      <h4 className="tm-text-secondary tm-mb-1">New Hudson</h4>
-                      <p className="tm-mb-2">Digital Marketing</p>
-                      <div className="tm-mb-3">
-                        <a
-                          href="https://facebook.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://twitter.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-twitter tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://linkedin.com"
-                          className="tm-about-social-link"
-                        >
-                          <i
-                            className="fab fa-linkedin-in tm-about-social-icon"
-                          ></i>
-                        </a>
-                      </div>
-                      <p>
-                        Pellentesque habitant morbi tristique senectus et netus
-                        et malesuada fames.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="col-md-4 text-center">
-                    <div className="tm-about-person mx-auto">
-                      <img
-                        src={deskgirl}
-                        alt="jp"
-                        className="img-fluid tm-mb-1"
-                      />
-                      <h4 className="tm-text-secondary tm-mb-1">Jennifer Wall</h4>
-                      <p className="tm-mb-2">Team Leader</p>
-                      <div className="tm-mb-3">
-                        <a
-                          href="https://facebook.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://twitter.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-twitter tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://linkedin.com"
-                          className="tm-about-social-link"
-                        >
-                          <i
-                            className="fab fa-linkedin-in tm-about-social-icon"
-                          ></i>
-                        </a>
-                      </div>
-                      <p>
-                        Three social icons are placed in above circles. Sed
-                        turpis nisl, congue a arcu in.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <Board/>
               </div>
               <div id="tab3">
                 <div className="text-content">
@@ -413,124 +131,8 @@ function AboutUs() {
                     placerat pellenteqsue.
                   </p>
                 </div>
-                <div className="row tm-pt-5">
-                  <div className="col-md-4 text-center">
-                    <div className="tm-about-person mx-auto">
-                      <img
-                        src={bitcoingirl}
-                        alt="jp"
-                        className="img-fluid tm-mb-1"
-                      />
-                      <h4 className="tm-text-secondary tm-mb-1">
-                        Catherine Theta
-                      </h4>
-                      <p className="tm-mb-2">Project Manager</p>
-                      <div className="tm-mb-3">
-                        <a
-                          href="https://facebook.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://twitter.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-twitter tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://linkedin.com"
-                          className="tm-about-social-link"
-                        >
-                          <i
-                            className="fab fa-linkedin-in tm-about-social-icon"
-                          ></i>
-                        </a>
-                      </div>
+                <Board/>
 
-                      <p>
-                        Mauris efficitur risus mi, et varius dolor sodales
-                        facilisis. Fusce sed mi tristique.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="col-md-4 text-center">
-                    <div className="tm-about-person mx-auto">
-                      <img
-                        src={arguy}
-                        alt="jp"
-                        className="img-fluid tm-mb-1"
-                      />
-                      <h4 className="tm-text-secondary tm-mb-1">New Hudson</h4>
-                      <p className="tm-mb-2">Digital Marketing</p>
-                      <div className="tm-mb-3">
-                        <a
-                          href="https://facebook.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://twitter.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-twitter tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://linkedin.com"
-                          className="tm-about-social-link"
-                        >
-                          <i
-                            className="fab fa-linkedin-in tm-about-social-icon"
-                          ></i>
-                        </a>
-                      </div>
-                      <p>
-                        Pellentesque habitant morbi tristique senectus et netus
-                        et malesuada fames.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="col-md-4 text-center">
-                    <div className="tm-about-person mx-auto">
-                      <img
-                        src={deskgirl}
-                        alt="jp"
-                        className="img-fluid tm-mb-1"
-                      />
-                      <h4 className="tm-text-secondary tm-mb-1">Jennifer Wall</h4>
-                      <p className="tm-mb-2">Team Leader</p>
-                      <div className="tm-mb-3">
-                        <a
-                          href="https://facebook.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-facebook-f tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://twitter.com"
-                          className="tm-about-social-link"
-                        >
-                          <i className="fab fa-twitter tm-about-social-icon"></i>
-                        </a>
-                        <a
-                          href="https://linkedin.com"
-                          className="tm-about-social-link"
-                        >
-                          <i
-                            className="fab fa-linkedin-in tm-about-social-icon"
-                          ></i>
-                        </a>
-                      </div>
-                      <p>
-                        Three social icons are placed in above circles. Sed
-                        turpis nisl, congue a arcu in.
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -538,45 +140,7 @@ function AboutUs() {
       </section>
 
       <Subscribe/>
-    
-
-      {/* <section className="row" id="tmCallToAction">
-        <div className="col-12 tm-page-cols-container tm-call-to-action-col">
-          <div className="tm-page-col-right">
-            <div className="tm-call-to-action-box">
-              <i className="fas fa-3x fa-rss-square tm-call-to-action-icon"></i>
-              <div className="tm-call-to-action-text">
-                <h3 className="tm-call-to-action-title">
-                  Vivamus sollicitudin tellus
-                </h3>
-                <p className="tm-call-to-action-description">
-                  Maecenas maximus tellus in dolor auctor tristique. Nam
-                  hendrerit posuere laoreet. Aliquam erat volutpat. Nulla eros
-                  est, imperdiet vel feugiat non, ullamcorper mattis nulla.
-                </p>
-                <form action="#" method="GET" className="tm-call-to-action-form">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    className="tm-email-input"
-                    required
-                  />
-                  <button type="submit" className="btn btn-primary">
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      
-      <footer className="row tm-page-footer">
-        <p className="col-12 tm-copyright-text mb-0">
-          Copyright &copy; 2019 Next Level Company... Designed by Template Mo
-        </p>
-      </footer>
+      <Footer/>
     </div>
         </div>
     )
